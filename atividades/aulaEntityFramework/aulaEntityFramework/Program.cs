@@ -1,4 +1,17 @@
+using aulaEntityFramework.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connString = builder.Configuration["AulaEntityFramework:ConnectionString"];
+
+/*
+    Fazemos a configuração do DbContext com o banco de dados específico, nesto caso o SQLServer
+ */
+
+builder.Services.AddDbContext<MyDbContext>(
+    options => options.UseSqlServer(connString)
+    );
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
