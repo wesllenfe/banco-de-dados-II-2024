@@ -20,5 +20,6 @@ namespace aulaEntityFramework.Models
          */
 
         public DbSet<Person> Persons { get; set; }
+        public DbSet<Adress> Adresses { get; set; }
     }
 }
