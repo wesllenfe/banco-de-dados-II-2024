@@ -47,7 +47,7 @@ namespace aulaEntityFramework.Controllers
         // GET: Adresses/Create
         public IActionResult Create()
         {
-            ViewData["PersonID"] = new SelectList(_context.Persons, "Id", "Id");
+            ViewData["PersonID"] = new SelectList(_context.Persons, "Id", "Name");
             return View();
         }
 
