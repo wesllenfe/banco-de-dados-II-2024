@@ -21,7 +21,7 @@ namespace aulaEntityFramework.Controllers
         // GET: People
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Persons.ToListAsync());
+            return View(await _context.Persons.Include(e => e.Adresses).ToListAsync());
         }
 
         // GET: People/Details/5

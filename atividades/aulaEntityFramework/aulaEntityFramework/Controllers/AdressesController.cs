@@ -81,7 +81,7 @@ namespace aulaEntityFramework.Controllers
             {
                 return NotFound();
             }
-            ViewData["PersonID"] = new SelectList(_context.Persons, "Id", "Id", adress.PersonID);
+            ViewData["PersonID"] = new SelectList(_context.Persons, "Id", "Name", adress.PersonID);
             return View(adress);
         }
 
